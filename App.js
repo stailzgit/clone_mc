@@ -1,15 +1,16 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
+import Header from "./src/components/Header";
+import styled from "styled-components/native";
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <StyleWrapApp>
+      <Header />
+    </StyleWrapApp>
   );
 }
+
+const StyleWrapApp = styled.SafeAreaView`
+  flex: 1;
+  padding: 0px 25px;
+`;
